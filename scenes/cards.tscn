@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://be6b85p0sfy22"]
+
+[ext_resource type="Script" uid="uid://d225tlclnxp10" path="res://scripts/cards.gd" id="1_cqxa1"]
+[ext_resource type="PackedScene" uid="uid://dwwny0uwa2bq5" path="res://scenes/card.tscn" id="2_02cqd"]
+
+[node name="main" type="Node2D" unique_id=1260910490]
+script = ExtResource("1_cqxa1")
+card_scene = ExtResource("2_02cqd")
+
+[node name="Timer" type="Timer" parent="." unique_id=682617727]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
